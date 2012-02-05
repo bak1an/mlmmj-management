@@ -1,0 +1,19 @@
+Python script for managing subscribers of mlmmj lists
+
+Right now it can subscribe, unsubscribe and list subscribers.
+Maybe later it will be able to create/delete lists, do some actions with message archives, execute more than one command per email, etc...
+
+How to use it:
+
+1) Add alias to your mail server, like that:
+   mlmmj: "|/path/to/script/mlmmj-management.py"
+
+2) Edit script options at beginning of file. You surely need to edit AUTHORIZED_SENDERS and PASS options. Others may be ok for you. And may be not.
+
+3) Now you can send email to your alias, with some commands in message body. Example:
+
+"sub; secret_list; john@email.com"  -  subscribe john@email.com to 'secret_list' list
+"unsub; other_list; other_john@other_email.com" - unsubscribe other_john@other_email.com from 'other_list' list
+"list; third_list" - list subscribers of 'third_list'
+
+Thats all.
